@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JapaBarbearia | Barbearia Premium</title>
+    <meta name="description"
+        content="JapaBarbearia — Tradição, estilo e precisão em cada corte. Agende seu horário e viva a experiência premium.">
+    <meta name="keywords" content="barbearia, barbershop, corte masculino, barba, sobrancelha, japabarbearia">
+
+    <!-- Google Fonts: Cormorant + Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar" id="navbar">
+
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/images/logo.png" class="logo-img" alt="logo">
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#benefits" class="nav-link">Diferenciais</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#testimonials" class="nav-link">Avaliações</a>
+                <a href="#pricing" class="nav-link">Preços</a>
+                <a href="#location" class="nav-link">Localização</a>
+            </nav>
+            <a href="#pricing" class="btn-primary nav-cta">Agendar Horário</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação">
+                <i data-lucide="menu" class="toggle-icon-open"></i>
+                <i data-lucide="x" class="toggle-icon-close"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="home" class="hero">
+        <div class="hero-split">
+            <!-- Left: Gradient + Content -->
+            <div class="hero-left">
+                <div class="hero-content">
+                    <span class="hero-eyebrow" data-animate="fade-up">
+                        <i data-lucide="scissors" class="eyebrow-icon"></i>
+                        Tradição & Excelência desde 2017
+                    </span>
+                    <h1 class="hero-title" data-animate="fade-up" data-delay="0.1">
+                        Mais do Que<br>Um Simples <span class="text-accent">Corte.</span>
+                    </h1>
+                    <p class="hero-subtitle" data-animate="fade-up" data-delay="0.2">
+                        Grooming premium, ambiente acolhedor e uma experiência que transforma
+                        cada visita em um momento especial. Bem-vindo à JapaBarbearia.
+                    </p>
+                    <div class="hero-actions" data-animate="fade-up" data-delay="0.3">
+                        <a href="#pricing" class="btn-primary btn-lg">
+                            Agendar Horário
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                        <a href="#services" class="btn-outline btn-lg">
+                            Nossos Serviços
+                        </a>
+                    </div>
+                    <!-- Social Proof -->
+                    <div class="hero-social-proof" data-animate="fade-up" data-delay="0.4">
+                        <div class="proof-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <span class="proof-text">
+                            <strong>5.0</strong> no Google — Confiável por centenas de clientes
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Hero Image -->
+            <div class="hero-right">
+                <img src="./assets/images/hero1.png" alt="JapaBarbearia barbeiro profissional" class="hero-img">
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-animate="fade-up" data-delay="0.6">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ========== BENEFITS SECTION ========== -->
+    <section id="benefits" class="benefits section-pad">
+        <div class="container benefits-container">
+            <!-- Floating tool images for GSAP animation - start beside title -->
+            <img src="./assets/images/tesoura.png" alt="tesoura" id="tesoura" class="tesoura floating-tool">
+            <img src="./assets/images/maquina.png" alt="maquina" id="maquina" class="maquina floating-tool">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Por Que Nos Escolher</span>
+                <h2 class="section-title">O Que Nos <span class="text-accent">Diferencia</span></h2>
+                <p class="section-desc">Não é apenas um corte. É uma experiência pensada em cada detalhe para você.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="benefit-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <h3>Profissionalismo</h3>
+                    <p>Mais de 10 anos de experiência com técnicas atualizadas e precisão em cada detalhe do seu visual.
+                    </p>
+                </div>
+                <div class="benefit-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="benefit-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Ambiente Premium</h3>
+                    <p>Espaço aconchegante com sinuca, boa música e um clima que te faz relaxar enquanto espera.</p>
+                </div>
+                <div class="benefit-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="benefit-icon">
+                        <i data-lucide="heart-handshake"></i>
+                    </div>
+                    <h3>Preço Justo</h3>
+                    <p>Qualidade premium com preços acessíveis. O melhor custo-benefício da região, sem abrir mão do
+                        padrão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="services section-pad">
+        <div class="container services-container">
+            <!-- Landing zones for the animated tools -->
+            <span id="tesoura-landing" class="tool-landing tool-landing-left"></span>
+            <span id="maquina-landing" class="tool-landing tool-landing-right"></span>
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Nossos Serviços</span>
+                <h2 class="section-title">Principais <span class="text-accent">Funcionalidades</span></h2>
+                <p class="section-desc">Cada serviço é realizado com atenção, produtos de qualidade e o cuidado que você
+                    merece.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card service-card-large" data-animate="fade-up" data-delay="0.1">
+                    <div class="service-image">
+                        <img src="./assets/images/corte2.jpeg" alt="Corte de cabelo premium na JapaBarbearia"
+                            loading="lazy">
+                    </div>
+                    <div class="service-info">
+                        <div class="service-tag">Signature</div>
+                        <h3>Corte Preciso</h3>
+                        <p>Visagismo aplicado para encontrar o estilo perfeito para o formato do seu rosto. Degradê,
+                            social, navalhado — você escolhe.</p>
+                    </div>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="service-image">
+                        <img src="./assets/images/corte3.jpeg" alt="Barba modelada na JapaBarbearia" loading="lazy">
+                    </div>
+                    <div class="service-info">
+                        <div class="service-tag">Grooming</div>
+                        <h3>Barba Esculpida</h3>
+                        <p>Navalha e acabamento milimétrico para uma barba impecável.</p>
+                    </div>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="service-image">
+                        <img src="./assets/images/corte1.jpg" alt="Tratamento VIP na JapaBarbearia" loading="lazy">
+                    </div>
+                    <div class="service-info">
+                        <div class="service-tag">VIP</div>
+                        <h3>Combo Completo</h3>
+                        <p>Cabelo + barba + sobrancelha. A transformação completa em uma sessão.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section id="testimonials" class="testimonials section-pad">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Avaliações Reais</span>
+                <h2 class="section-title">O Que Nossos Clientes <span class="text-accent">Dizem</span></h2>
+                <p class="section-desc">Avaliações reais do Google. Sem filtros, sem enrolação.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.05">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Muito bom, ótimo profissional, preço justo e ainda tem uma sinuquinha
+                        pra jogar enquanto espera a vez 😁"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AN</div>
+                        <div>
+                            <span class="author-name">Agnes Noronha</span>
+                            <span class="author-badge">
+                                <i data-lucide="map-pin" class="badge-icon"></i>
+                                Local Guide · 72 avaliações
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Atendimento top, e ele é muito profissional. Parabéns!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CR</div>
+                        <div>
+                            <span class="author-name">Cristian Rodrigues</span>
+                            <span class="author-badge">
+                                <i data-lucide="map-pin" class="badge-icon"></i>
+                                Local Guide · 44 avaliações
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Recomendo, o menino Japa é top!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EB</div>
+                        <div>
+                            <span class="author-name">Elenilton Bessa</span>
+                            <span class="author-badge">
+                                <i data-lucide="map-pin" class="badge-icon"></i>
+                                Local Guide · 105 avaliações
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Bom atendimento e qualidade no serviço."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">YW</div>
+                        <div>
+                            <span class="author-name">Yatagnan Washington</span>
+                            <span class="author-badge">
+                                <i data-lucide="check-circle" class="badge-icon"></i>
+                                Cliente verificado
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.25">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Japa se garante!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">WA</div>
+                        <div>
+                            <span class="author-name">Wilson De Albuquerque</span>
+                            <span class="author-badge">
+                                <i data-lucide="map-pin" class="badge-icon"></i>
+                                Local Guide · 21 avaliações
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Super recomendo!!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">GS</div>
+                        <div>
+                            <span class="author-name">Glaucia de Sá</span>
+                            <span class="author-badge">
+                                <i data-lucide="map-pin" class="badge-icon"></i>
+                                Local Guide · 27 avaliações
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRICING SECTION ========== -->
+    <section id="pricing" class="pricing section-pad">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Tabela de Preços</span>
+                <h2 class="section-title">Planos & <span class="text-accent">Preços</span></h2>
+                <p class="section-desc">Valores transparentes, sem surpresas. Qualidade premium com preço justo.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Corte Infantil -->
+                <div class="pricing-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="pricing-header">
+                        <i data-lucide="baby" class="pricing-icon"></i>
+                        <h3>Corte Infantil</h3>
+                        <p class="pricing-desc">Para os pequenos que já querem estar no estilo</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Corte personalizado
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Acabamento com máquina
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Atendimento paciente e cuidadoso
+                            </li>
+                        </ul>
+                        <div class="pricing-price">
+                            <span class="price-currency">R$</span>
+                            <span class="price-value">30</span>
+                        </div>
+                        <a href="#" class="btn-primary btn-block">Agendar</a>
+                    </div>
+                </div>
+                <!-- Corte Adulto -->
+                <div class="pricing-card pricing-card-featured" data-animate="fade-up" data-delay="0.2">
+                    <div class="pricing-badge">Mais Popular</div>
+                    <div class="pricing-header">
+                        <i data-lucide="scissors" class="pricing-icon"></i>
+                        <h3>Corte Adulto</h3>
+                        <p class="pricing-desc">Cabelo com acabamento profissional e visagismo</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Corte com visagismo
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Degradê / Social / Navalhado
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Finalização com produtos premium
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Sobrancelha cortesia
+                            </li>
+                        </ul>
+                        <div class="pricing-price">
+                            <span class="price-currency">R$</span>
+                            <span class="price-value">45</span>
+                        </div>
+                        <a href="#" class="btn-primary btn-block">Agendar</a>
+                    </div>
+                </div>
+                <!-- Combo Completo -->
+                <div class="pricing-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="pricing-header">
+                        <i data-lucide="crown" class="pricing-icon"></i>
+                        <h3>Combo Completo</h3>
+                        <p class="pricing-desc">Cabelo + Barba + Sobrancelha — A experiência máxima</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Corte de cabelo completo
+                            </li>
+
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Sobrancelha alinhada
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="feature-check"></i>
+                                Hidratação facial
+                            </li>
+                        </ul>
+                        <div class="pricing-price">
+                            <span class="price-currency">R$</span>
+                            <span class="price-value">70</span>
+                        </div>
+                        <a href="#" class="btn-primary btn-block">Agendar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY / CTA SECTION ========== -->
+    <section id="gallery" class="gallery section-pad">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Galeria de Cortes</span>
+                <h2 class="section-title">Nosso <span class="text-accent">Trabalho</span></h2>
+                <p class="section-desc">Cada corte é uma obra de arte. Confira alguns dos nossos trabalhos.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-tall" data-animate="fade-up" data-delay="0.1">
+                    <img src="./assets/images/img1.jpeg" alt="Corte fade masculino - JapaBarbearia" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Fade Skin</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-animate="fade-up" data-delay="0.15">
+                    <img src="./assets/images/img2.jpeg" alt="Barba modelada - JapaBarbearia" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Barba Esculpida</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-animate="fade-up" data-delay="0.2">
+                    <img src="./assets/images/img3.jpeg" alt="Pompadour clássico - JapaBarbearia" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Pompadour</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-wide" data-animate="fade-up" data-delay="0.25">
+                    <img src="./assets/images/img4.jpeg" alt="Tratamento VIP - JapaBarbearia" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Tratamento VIP</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Gallery CTA -->
+            <div class="gallery-cta" data-animate="fade-up" data-delay="0.3">
+                <p>Quer ser o próximo?</p>
+                <a href="#pricing" class="btn-primary btn-lg">
+                    Agendar Meu Horário
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOCATION SECTION ========== -->
+    <section id="location" class="location section-pad">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Onde Estamos</span>
+                <h2 class="section-title">Nossa <span class="text-accent">Localização</span></h2>
+                <p class="section-desc">Venha nos visitar. Estamos esperando por você.</p>
+            </div>
+            <div class="location-grid">
+                <div class="location-info" data-animate="fade-up" data-delay="0.1">
+                    <div class="location-detail">
+                        <div class="detail-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. das Esmeraldas, 1000<br>Centro, Manaus - AM</p>
+                        </div>
+                    </div>
+                    <div class="location-detail">
+                        <div class="detail-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Seg a Sex: 09:00 — 20:00<br>Sáb: 09:00 — 18:00<br>Dom: Fechado</p>
+                        </div>
+                    </div>
+                    <div class="location-detail">
+                        <div class="detail-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <h4>Contato</h4>
+                            <p>(92) 99999-9999</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5592999999999" target="_blank" rel="noopener noreferrer"
+                        class="btn-whatsapp">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+                <div class="location-map" data-animate="fade-up" data-delay="0.2">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3!2d-38.4868838!3d-3.7893835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7456551b779f7%3A0xd42dc00c282dcb17!2sJapa%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1718751446000!5m2!1spt-BR!2sbr"
+                        width="100%" height="100%" style="border:0; border-radius: 16px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização da JapaBarbearia no mapa">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo footer-logo">
+                        <span class="logo-text">Japa<span class="logo-accent">Barbearia</span></span>
+                    </a>
+                    <p class="footer-tagline">Tradição, estilo e precisão em cada corte. Onde o cuidado masculino
+                        encontra a excelência.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#benefits">Diferenciais</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#pricing">Preços</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#pricing">Corte de Cabelo</a></li>
+                        <li><a href="#pricing">Barba</a></li>
+                        <li><a href="#pricing">Sobrancelha</a></li>
+                        <li><a href="#pricing">Combo Completo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>
+                            <i data-lucide="map-pin" class="footer-icon"></i>
+                            Av. das Esmeraldas, 1000
+                        </li>
+                        <li>
+                            <i data-lucide="phone" class="footer-icon"></i>
+                            (92) 99999-9999
+                        </li>
+                        <li>
+                            <i data-lucide="mail" class="footer-icon"></i>
+                            contato@japabarbearia.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JapaBarbearia. Todos os direitos reservados.</p>
+                <p class="footer-credit">Feito com excelência.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5592999999999" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
+        aria-label="Chamar no WhatsApp" id="whatsappFloat">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
